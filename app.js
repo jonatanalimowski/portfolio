@@ -38,7 +38,7 @@ const loadParticles = async () => {
                 },
                 move: {
                     enable: true,
-                    speed: 2,
+                    speed: 10,
                     direction: "bottom-right",
                     random: true,
                     straight: false,
@@ -89,21 +89,6 @@ const loadParticles = async () => {
                     }
                 }
             },
-            emitters: {
-                direction: "bottom-right",
-                rate: {
-                    delay: 0.5,
-                    quantity: 1
-                },
-                position: {
-                    x: 80,
-                    y: -10
-                },
-                size: {
-                    width: 40,
-                    height: 0
-                }
-            }
         }
     });
 };
