@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(221, 210, 195);
+}
+
+body {
+    position: relative;
+    background-color: #11141a;
+    overflow-x: hidden;
+}
+
+#tsparticles {
+    position: absolute;
+    z-index: -2;
+    height: 100%;
+    top: 0;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: antiquewhite;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    min-height: 30px;
+    z-index: 100;
+
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    bottom: 0;
+    position: sticky;
+
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 45px;
+    font-size: 30px;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px;
+    gap: 250px;
+    font-size: 40px;
+    width: 100%;
+}
+
+#heropanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 80vh;
+    padding-left: 6%;
+    position: relative;
+
+    width: 100%;
+    margin-top: 200px;
+    margin-bottom: 250px;
+}
+
+#herocontent {
+
+    position: relative;
+    top: -75px;
+    max-width: 90%;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#herocontent h1 {
+    font-family: Cinzel;
+
+    background: linear-gradient(to right, #ffdff8, antiquewhite);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    padding-left: 10%;
+    padding-right: 70%;
+    font-size: 120px;
+}
+
+#herocontent h3 {
+    font-size: 50px;
+}
+
+#tree {
+    z-index: -1;
+    position: absolute;
+    right: -675px;
+    bottom: -100px;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#tree img {
+    height: 175vh;
+    /* filter: blur(6px); */
+    width: auto;
+    object-fit: contain;
+}
+
+#aboutme {
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+#doswiadczenie {
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+#umiejetnosci {
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutme-container,
+.doswiadczenie-container,
+.umiejetnosci-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 900px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    text-align: justify;
+}
+
+.doswiadczenie-container {
+    gap: 45px;
+}
+
+.textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.textbox h3 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.textbox h4 {
+    font-size: 36px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.textbox p {
+    font-size: 24px;
+    text-align: center;
+}
+
+h2 {
+    font-family: Cinzel;
+    font-size: 84px;
+
+    background: linear-gradient(to right, #d6c2d2, antiquewhite);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsywność dla telefonów */
+@media (max-width: 768px) {
+    main {
+        gap: 100px;
+    }
+
+    #heropanel {
+        padding-left: 5%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        min-height: auto;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #herocontent {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    #herocontent h1 {
+        padding: 0;
+        font-size: 50px;
+    }
+
+    #herocontent h3 {
+        font-size: 24px;
+    }
+
+    #tree {
+        display: none;
+    }
+
+    h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .aboutme-container,
+    .doswiadczenie-container,
+    .umiejetnosci-container {
+        width: 95%;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .textbox h3 {
+        font-size: 28px;
+    }
+
+    .textbox h4 {
+        font-size: 22px;
+    }
+
+    .textbox p {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    nav {
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
